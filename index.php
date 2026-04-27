@@ -5,25 +5,25 @@
 <meta charset="utf-8">
 <title>SecureBank - 안전한 금융의 시작</title>
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',sans-serif; }
-body { background:#f4f6f9; color:#333; }
-nav { background:#1a3c6e; padding:15px 40px; display:flex; justify-content:space-between; align-items:center; }
-nav .logo { color:white; font-size:24px; font-weight:700; letter-spacing:1px; }
-nav .logo span { color:#4fc3f7; }
-nav ul { list-style:none; display:flex; gap:30px; }
-nav ul a { color:#ccc; text-decoration:none; font-size:14px; }
-nav ul a:hover { color:white; }
-.hero { background:linear-gradient(135deg,#1a3c6e,#2196f3); color:white; padding:80px 40px; text-align:center; }
-.hero h1 { font-size:42px; margin-bottom:15px; }
-.hero p { font-size:18px; opacity:0.85; margin-bottom:30px; }
-.hero a { background:#4fc3f7; color:#1a3c6e; padding:14px 36px; border-radius:30px; text-decoration:none; font-weight:700; font-size:16px; }
-.services { display:flex; justify-content:center; gap:30px; padding:60px 40px; flex-wrap:wrap; }
-.card { background:white; border-radius:12px; padding:30px; width:220px; text-align:center; box-shadow:0 2px 12px rgba(0,0,0,0.08); }
-.card .icon { font-size:40px; margin-bottom:15px; }
-.card h3 { font-size:16px; color:#1a3c6e; margin-bottom:8px; }
-.card p { font-size:13px; color:#777; }
-.card a { display:inline-block; margin-top:15px; background:#1a3c6e; color:white; padding:8px 20px; border-radius:20px; text-decoration:none; font-size:13px; }
-footer { background:#1a3c6e; color:#aaa; text-align:center; padding:20px; font-size:13px; }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{background:#f4f6f9;color:#333;}
+nav{background:#1a3c6e;padding:15px 40px;display:flex;justify-content:space-between;align-items:center;}
+nav .logo{color:white;font-size:24px;font-weight:700;letter-spacing:1px;}
+nav .logo span{color:#4fc3f7;}
+nav ul{list-style:none;display:flex;gap:30px;}
+nav ul a{color:#ccc;text-decoration:none;font-size:14px;}
+nav ul a:hover{color:white;}
+.hero{background:linear-gradient(135deg,#1a3c6e,#2196f3);color:white;padding:80px 40px;text-align:center;}
+.hero h1{font-size:42px;margin-bottom:15px;}
+.hero p{font-size:18px;opacity:0.85;margin-bottom:30px;}
+.hero a{background:#4fc3f7;color:#1a3c6e;padding:14px 36px;border-radius:30px;text-decoration:none;font-weight:700;font-size:16px;}
+.services{display:flex;justify-content:center;gap:30px;padding:60px 40px;flex-wrap:wrap;}
+.card{background:white;border-radius:12px;padding:30px;width:220px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.08);}
+.card .icon{font-size:40px;margin-bottom:15px;}
+.card h3{font-size:16px;color:#1a3c6e;margin-bottom:8px;}
+.card p{font-size:13px;color:#777;}
+.card a{display:inline-block;margin-top:15px;background:#1a3c6e;color:white;padding:8px 20px;border-radius:20px;text-decoration:none;font-size:13px;}
+footer{background:#1a3c6e;color:#aaa;text-align:center;padding:20px;font-size:13px;}
 </style>
 </head>
 <body>
